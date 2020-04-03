@@ -154,7 +154,7 @@ public class DictionaryTrie {
     private String[] readWordsFromResourceFile(Context context) {
 
         // create input reader for the word file
-        InputStream is = context.getResources().openRawResource(R.raw.small_word_list);
+        InputStream is = context.getResources().openRawResource(R.raw.word_list);
         InputStreamReader ir = new InputStreamReader(is);
         BufferedReader br = new BufferedReader(ir);
 
