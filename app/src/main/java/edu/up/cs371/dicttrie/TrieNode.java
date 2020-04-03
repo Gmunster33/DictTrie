@@ -1,6 +1,6 @@
 package edu.up.cs371.dicttrie;
 
-import java.util.Vector;
+        import java.util.Vector;
 
 public class TrieNode {
 

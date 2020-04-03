@@ -32,17 +32,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~My Stuff~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        String[] wordBank = {"alpha", "all", "allowance", "zygote", "allowed","alpine"};
+ //       String[] wordBank = {"alpha", "all", "allowance", "zygote", "allowed","alpine"};
 
         DictionaryTrie dictTrie = new DictionaryTrie();
         dictTrie.initializeTop();
+        dictTrie.readWordsFromFile(this);
+        dictTrie.initializeEnglishDictionaryTrie();
 
-        for (int i = 0; i<wordBank.length; i++ ) {
-            dictTrie.addWord(wordBank[i]);
-        }
+//        for (int i = 0; i<wordBank.length; i++ ) {
+//            dictTrie.addWord(wordBank[i]);
+//        }
 
+//        for (int i = 0; i < dictTrie.top.size(); i++) {
+//            dictTrie.printSubTries(dictTrie.top.get(i));
+//        }
         for (int i = 0; i < dictTrie.top.size(); i++) {
-            dictTrie.printSubTries(dictTrie.top.get(i));
+            dictTrie.printWordsInTrie(dictTrie.top.get(i));
         }
 
     }
